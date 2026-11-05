@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Funciones</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- ESTILOS (CSS): así se ven las etiquetas h1 de la página -->
+    <style>
+        h1 {
+            color: darkslateblue;                    /* color de la letra */
+            font-size: 50px;                         /* tamaño de la letra */
+            font-family: "Oswald", Arial, sans-serif; /* tipo de letra */
+        }
+    </style>
+</head>
+<body>
+    <script>
+
+        // ============================================================
+        // FUNCIONES (cada una hace una tarea y se puede usar muchas veces)
+        // ============================================================
+
+        // suma: recibe dos números (a y b), los suma y escribe el resultado en pantalla
+        function suma(a, b)
+        {
+            let resultado = a + b          // guarda la suma en una variable
+            document.write(resultado)      // document.write imprime en la página
+            // return(resultado)           // (opcional) devolver el valor en lugar de imprimirlo
+        }
+
+        // texto: escribe un texto en negrita, con color y tamaño
+        //   cadena      -> el texto que se va a mostrar
+        //   colorletra  -> el color de la letra (ej. "red", "blue")
+        //   tam         -> el tamaño de 1 a 7 (etiqueta font)
+        function texto(cadena, colorletra, tam)
+        {
+            document.write("<b><font size=" + tam + " color=" + colorletra + ">" + cadena + "</font></b>")
+        }
+
+        // salta: hace un salto de línea (<br>) para que lo siguiente salga abajo
+        function salta()
+        {
+            document.write("<br>")
+        }
+
+        // texto2: escribe un texto como título con estilo propio
+        //   cadena -> el texto que se va a mostrar
+        //   tam    -> tamaño de la letra en píxeles
+        //   fuente -> tipo de letra (ej. "Oswald", "Arial")
+        //   color  -> color de la letra (ej. "red", "green")
+        function texto2(cadena, tam, fuente, color)
+        {
+            document.write("<h1 style='font-size:" + tam + "px; font-family:" + fuente + "; color:" + color + "'>" + cadena + "</h1>")
+        }
+
+        // ============================================================
+        // LLAMADAS A LAS FUNCIONES (aquí se imprime todo en pantalla)
+        // ============================================================
+
+        // --- Mensajes con la función texto (negrita + color + tamaño) ---
+        texto("Buen día", "crimson", 5)                              // rojo carmesí, tamaño 5
+        salta()                                                      // baja una línea
+        texto("Es un gusto", "darkorange", 6)           // naranja oscuro, tamaño 6
+        salta()
+        texto("Esta es mi práctica sobre funciones", "royalblue", 4) // azul rey, tamaño 4
+        salta()
+        texto("Cada función hace una tarea distinta", "seagreen", 3) // verde mar, tamaño 3
+        salta()
+        salta()                                                      // dos saltos = una línea en blanco
+
+        // --- Títulos con la función texto2 (tamaño + fuente + color) ---
+        texto2("Hola Otra Vez", 28, "Oswald", "mediumvioletred")   // violeta rojizo, 28px
+        texto2("Aquí e cambia el estilo", 36, "Verdana", "darkcyan")    // cian oscuro, 36px
+        texto2("Estas funciones se repiten", 44, "Georgia", "goldenrod") // dorado, 44px
+
+        // --- Suma con la función suma ---
+        texto("La suma de 7 + 8 es: ", "navy", 4)       // texto explicativo
+        suma(7, 8)                                       // imprime 15
+        salta()
+        texto("La suma de 20 + 45 es: ", "navy", 4)
+        suma(20, 45)                                     // imprime 65
+        salta()
+        salta()
+
+        // --- Despedida ---
+        texto("Hasta la próxima", "indigo", 6)           // índigo, tamaño 6
+        salta()
+        texto("Fin de la práctica", "dimgray", 2)        // gris oscuro, tamaño 2
+
+    </script>
+</body>
+</html>
